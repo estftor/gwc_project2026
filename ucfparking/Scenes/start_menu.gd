@@ -16,4 +16,4 @@ func _ready() -> void:
 
 func _on_setting_exit_button_pressed() -> void:
 	$"Settings Menu".visible = false
-	$"Buttons container".visible = true
+	$"Main Menu Buttons".visible = true
