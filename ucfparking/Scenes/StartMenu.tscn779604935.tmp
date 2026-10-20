@@ -1,0 +1,332 @@
+[gd_scene format=3 uid="uid://b2sdy72dmgycl"]
+
+[ext_resource type="Texture2D" uid="uid://skvla8syq3ob" path="res://Assets/temp background.png" id="1_dl0pg"]
+[ext_resource type="Script" uid="uid://c45pyipho0ter" path="res://Scenes/start_menu.gd" id="1_h303d"]
+[ext_resource type="Texture2D" uid="uid://cffq3514bkory" path="res://Assets/UI/start menu buttons.png" id="2_dl0pg"]
+[ext_resource type="FontFile" uid="uid://warafq12toru" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="3_dl0pg"]
+[ext_resource type="Texture2D" uid="uid://berhliuj4nr5h" path="res://Assets/UI/Car game UI.png" id="5_ujd4t"]
+[ext_resource type="Script" uid="uid://c3c2a4jbhps64" path="res://Scenes/volume_slider.gd" id="6_ql1sk"]
+[ext_resource type="AudioStream" uid="uid://b4cskh878hfsn" path="res://Cave system.mp3" id="7_dibtv"]
+[ext_resource type="Script" uid="uid://e4eka8ww1p17" path="res://Scenes/mute_button.gd" id="7_o6asp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wphs"]
+atlas = ExtResource("2_dl0pg")
+region = Rect2(2, 3, 113, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pu4w"]
+atlas = ExtResource("2_dl0pg")
+region = Rect2(2, 29, 113, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1y5f"]
+atlas = ExtResource("2_dl0pg")
+region = Rect2(2, 55, 113, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ql1sk"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(3, 3, 438, 265)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dibtv"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(38, 281, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6asp"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(56, 297, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o42a4"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(56, 281, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qo7l"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(5, 280, 13, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3loq"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(20, 280, 13, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypme4"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(5, 270, 199, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7rkd"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(2, 297, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3sen"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(38, 297, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7sq3"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(20, 297, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2afg0"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(100, 283, 21, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcow8"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(77, 283, 22, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3cy3"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(472, 176, 23, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1ab2"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(2, 313, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6l655"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(38, 313, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gn5ta"]
+atlas = ExtResource("5_ujd4t")
+region = Rect2(20, 313, 16, 15)
+
+[node name="Start Menu" type="Control" unique_id=397690255]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h303d")
+
+[node name="Background" type="TextureRect" parent="." unique_id=477838863]
+visible = false
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("1_dl0pg")
+
+[node name="Buttons container" type="VBoxContainer" parent="." unique_id=1446113530]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = 27.134995
+offset_right = 56.5
+offset_bottom = 110.13519
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset = Vector2(56.5, 41.5)
+
+[node name="Start Button" type="TextureButton" parent="Buttons container" unique_id=973303673]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_7wphs")
+texture_pressed = SubResource("AtlasTexture_3pu4w")
+texture_hover = SubResource("AtlasTexture_u1y5f")
+
+[node name="Button Label" type="Label" parent="Buttons container/Start Button" unique_id=1448276981]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.13333334, 0.015686275, 1)
+theme_override_fonts/font = ExtResource("3_dl0pg")
+theme_override_font_sizes/font_size = 8
+text = "START"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings Button" type="TextureButton" parent="Buttons container" unique_id=1762786936]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_7wphs")
+texture_pressed = SubResource("AtlasTexture_3pu4w")
+texture_hover = SubResource("AtlasTexture_u1y5f")
+
+[node name="Button Label" type="Label" parent="Buttons container/Settings Button" unique_id=778194766]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.13333334, 0.015686275, 1)
+theme_override_fonts/font = ExtResource("3_dl0pg")
+theme_override_font_sizes/font_size = 8
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit Button" type="TextureButton" parent="Buttons container" unique_id=911920677]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_7wphs")
+texture_pressed = SubResource("AtlasTexture_3pu4w")
+texture_hover = SubResource("AtlasTexture_u1y5f")
+
+[node name="Button Label" type="Label" parent="Buttons container/Exit Button" unique_id=549716859]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.13333334, 0.015686275, 1)
+theme_override_fonts/font = ExtResource("3_dl0pg")
+theme_override_font_sizes/font_size = 8
+text = "EXIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings Menu" type="Control" parent="." unique_id=1779461638]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="TextureRect" parent="Settings Menu" unique_id=1403461076]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 81.0
+offset_top = 27.5
+offset_right = 519.0
+offset_bottom = 292.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_ql1sk")
+
+[node name="Vbox Settings" type="VBoxContainer" parent="Settings Menu/Panel" unique_id=1495995492]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 41.0
+offset_right = 222.0
+offset_bottom = 81.0
+
+[node name="Volume Label" type="Label" parent="Settings Menu/Panel/Vbox Settings" unique_id=26574430]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.90588236, 0.85490197, 0.74509805, 1)
+theme_override_font_sizes/font_size = 8
+text = " VOLUME"
+
+[node name="HBox Volume" type="HBoxContainer" parent="Settings Menu/Panel/Vbox Settings" unique_id=2029635267]
+layout_mode = 2
+
+[node name="Volume Minus Button" type="TextureButton" parent="Settings Menu/Panel/Vbox Settings/HBox Volume" unique_id=1721199374]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_dibtv")
+texture_pressed = SubResource("AtlasTexture_o6asp")
+texture_hover = SubResource("AtlasTexture_o42a4")
+
+[node name="Volume Slider" type="HSlider" parent="Settings Menu/Panel/Vbox Settings/HBox Volume" unique_id=699400468]
+custom_minimum_size = Vector2(217.01, 0)
+layout_mode = 2
+theme_override_icons/grabber = SubResource("AtlasTexture_0qo7l")
+theme_override_icons/grabber_highlight = SubResource("AtlasTexture_b3loq")
+theme_override_icons/tick = SubResource("AtlasTexture_ypme4")
+max_value = 1.0
+step = 0.01
+value = 0.75
+script = ExtResource("6_ql1sk")
+audio_bus_name = "Master"
+
+[node name="Volume Plus Button" type="TextureButton" parent="Settings Menu/Panel/Vbox Settings/HBox Volume" unique_id=1443385550]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_o7rkd")
+texture_pressed = SubResource("AtlasTexture_x3sen")
+texture_hover = SubResource("AtlasTexture_m7sq3")
+
+[node name="HBox Mute" type="HBoxContainer" parent="Settings Menu/Panel/Vbox Settings" unique_id=158276835]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Mute button" type="CheckButton" parent="Settings Menu/Panel/Vbox Settings/HBox Mute" unique_id=1183815991]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_icons/checked = SubResource("AtlasTexture_2afg0")
+theme_override_icons/unchecked = SubResource("AtlasTexture_mcow8")
+script = ExtResource("7_o6asp")
+
+[node name="Mute Label" type="Label" parent="Settings Menu/Panel/Vbox Settings/HBox Mute" unique_id=180401414]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.90588236, 0.85490197, 0.74509805, 1)
+theme_override_font_sizes/font_size = 8
+text = "Mute"
+
+[node name="Empty Space" type="TextureRect" parent="Settings Menu/Panel/Vbox Settings" unique_id=244653960]
+custom_maximum_size = Vector2(-1, 34.865)
+layout_mode = 2
+texture = SubResource("AtlasTexture_c3cy3")
+
+[node name="Screen Size Label" type="Label" parent="Settings Menu/Panel/Vbox Settings" unique_id=470476937]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.90588236, 0.85490197, 0.74509805, 1)
+theme_override_font_sizes/font_size = 8
+text = " SCREEN SIZE"
+
+[node name="Screen Size Options" type="OptionButton" parent="Settings Menu/Panel/Vbox Settings" unique_id=788912642]
+custom_maximum_size = Vector2(187, 14)
+layout_mode = 2
+theme_override_font_sizes/font_size = 8
+selected = 0
+item_count = 2
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+
+[node name="Settings Label" type="Label" parent="Settings Menu/Panel" unique_id=117412239]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 10.5
+offset_right = 137.0
+offset_bottom = 33.5
+theme_override_colors/font_color = Color(0.90753275, 0.8566249, 0.74325526, 1)
+theme_override_fonts/font = ExtResource("3_dl0pg")
+text = "SETTINGS"
+
+[node name="Setting Exit Button" type="TextureButton" parent="Settings Menu/Panel" unique_id=1147983658]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 6.5
+offset_right = 428.0
+offset_bottom = 21.5
+texture_normal = SubResource("AtlasTexture_y1ab2")
+texture_pressed = SubResource("AtlasTexture_6l655")
+texture_hover = SubResource("AtlasTexture_gn5ta")
+
+[node name="Main Menu Theme" type="AudioStreamPlayer" parent="." unique_id=500499998]
+stream = ExtResource("7_dibtv")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="Buttons container/Start Button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Buttons container/Settings Button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Buttons container/Exit Button" to="." method="_on_exit_button_pressed"]
+[connection signal="value_changed" from="Settings Menu/Panel/Vbox Settings/HBox Volume/Volume Slider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="value_changed" from="Settings Menu/Panel/Vbox Settings/HBox Volume/Volume Slider" to="Settings Menu/Panel/Vbox Settings/HBox Volume/Volume Slider" method="_on_value_changed"]
+[connection signal="pressed" from="Settings Menu/Panel/Vbox Settings/HBox Mute/Mute button" to="." method="_on_mute_button_pressed"]
+[connection signal="toggled" from="Settings Menu/Panel/Vbox Settings/HBox Mute/Mute button" to="Settings Menu/Panel/Vbox Settings/HBox Mute/Mute button" method="_on_toggled"]
+[connection signal="pressed" from="Settings Menu/Panel/Setting Exit Button" to="." method="_on_setting_exit_button_pressed"]
