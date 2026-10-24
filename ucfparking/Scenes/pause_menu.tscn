@@ -1,6 +1,20 @@
 [gd_scene format=3 uid="uid://dfqniulhhxati"]
 
 [ext_resource type="Script" uid="uid://cvynp1wb6o8oy" path="res://Scripts/pause_menu.gd" id="1_emv3i"]
+[ext_resource type="Texture2D" uid="uid://cffq3514bkory" path="res://Assets/UI/start menu buttons.png" id="2_1och7"]
+[ext_resource type="FontFile" uid="uid://warafq12toru" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="3_bpi0q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmyb1"]
+atlas = ExtResource("2_1och7")
+region = Rect2(2, 3, 113, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myy0f"]
+atlas = ExtResource("2_1och7")
+region = Rect2(2, 29, 113, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjs17"]
+atlas = ExtResource("2_1och7")
+region = Rect2(2, 55, 113, 25)
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1632151657]
 process_mode = 3
@@ -13,3 +27,126 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.5882353)
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=1534246607]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset = Vector2(56, 56)
+
+[node name="Resume Button" type="TextureButton" parent="Buttons" unique_id=2124143145]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_vmyb1")
+texture_pressed = SubResource("AtlasTexture_myy0f")
+texture_hover = SubResource("AtlasTexture_sjs17")
+
+[node name="Button Label" type="Label" parent="Buttons/Resume Button" unique_id=1708972612]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.13333334, 0.015686275, 1)
+theme_override_fonts/font = ExtResource("3_bpi0q")
+theme_override_font_sizes/font_size = 8
+text = "RESUME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings Button" type="TextureButton" parent="Buttons" unique_id=1847345177]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_vmyb1")
+texture_pressed = SubResource("AtlasTexture_myy0f")
+texture_hover = SubResource("AtlasTexture_sjs17")
+
+[node name="Button Label" type="Label" parent="Buttons/Settings Button" unique_id=1197335152]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.13333334, 0.015686275, 1)
+theme_override_fonts/font = ExtResource("3_bpi0q")
+theme_override_font_sizes/font_size = 8
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Restart Button" type="TextureButton" parent="Buttons" unique_id=387181042]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_vmyb1")
+texture_pressed = SubResource("AtlasTexture_myy0f")
+texture_hover = SubResource("AtlasTexture_sjs17")
+
+[node name="Button Label" type="Label" parent="Buttons/Restart Button" unique_id=461116434]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.13333334, 0.015686275, 1)
+theme_override_fonts/font = ExtResource("3_bpi0q")
+theme_override_font_sizes/font_size = 8
+text = "RESTART"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main Menu Button" type="TextureButton" parent="Buttons" unique_id=2074843734]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_vmyb1")
+texture_pressed = SubResource("AtlasTexture_myy0f")
+texture_hover = SubResource("AtlasTexture_sjs17")
+
+[node name="Button Label" type="Label" parent="Buttons/Main Menu Button" unique_id=355163669]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.13333334, 0.015686275, 1)
+theme_override_fonts/font = ExtResource("3_bpi0q")
+theme_override_font_sizes/font_size = 8
+text = "MAIN MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
