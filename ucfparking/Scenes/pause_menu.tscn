@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dfqniulhhxati"]
 
-[ext_resource type="Script" uid="uid://cvynp1wb6o8oy" path="res://Scripts/pause_menu.gd" id="1_emv3i"]
+[ext_resource type="Script" uid="uid://cvynp1wb6o8oy" path="res://Scenes/pause_menu.gd" id="1_bpi0q"]
 [ext_resource type="Texture2D" uid="uid://cffq3514bkory" path="res://Assets/UI/start menu buttons.png" id="2_1och7"]
 [ext_resource type="FontFile" uid="uid://warafq12toru" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="3_bpi0q"]
 [ext_resource type="PackedScene" uid="uid://82s0ibvo5jxh" path="res://Scenes/settings_menu.tscn" id="4_bpi0q"]
@@ -19,7 +19,7 @@ region = Rect2(2, 55, 113, 25)
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=1632151657]
 process_mode = 3
-script = ExtResource("1_emv3i")
+script = ExtResource("1_bpi0q")
 
 [node name="Dim" type="ColorRect" parent="." unique_id=429185977]
 anchors_preset = 15
