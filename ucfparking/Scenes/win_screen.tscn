@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://3t81ia4a1vuf"]
+
+[ext_resource type="Texture2D" uid="uid://cffq3514bkory" path="res://Assets/UI/start menu buttons.png" id="1_a00f1"]
+[ext_resource type="FontFile" uid="uid://warafq12toru" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="2_awi1s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwc64"]
+atlas = ExtResource("1_a00f1")
+region = Rect2(2, 3, 113, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85imr"]
+atlas = ExtResource("1_a00f1")
+region = Rect2(2, 29, 113, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mf36t"]
+atlas = ExtResource("1_a00f1")
+region = Rect2(2, 55, 113, 25)
+
+[node name="WinScreen" type="CanvasLayer" unique_id=1674275575]
+
+[node name="Dim" type="ColorRect" parent="." unique_id=1314959254]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=620238790]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=855610621]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "You Win!"
+horizontal_alignment = 1
+
+[node name="Win Buttons" type="VBoxContainer" parent="VBoxContainer" unique_id=384610548]
+layout_mode = 2
+
+[node name="Next Level Button" type="TextureButton" parent="VBoxContainer/Win Buttons" unique_id=18076093]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_bwc64")
+texture_pressed = SubResource("AtlasTexture_85imr")
+texture_hover = SubResource("AtlasTexture_mf36t")
+
+[node name="Button Label" type="Label" parent="VBoxContainer/Win Buttons/Next Level Button" unique_id=1933875505]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.13333334, 0.015686275, 1)
+theme_override_fonts/font = ExtResource("2_awi1s")
+theme_override_font_sizes/font_size = 8
+text = "NEXT LEVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Restart Button" type="TextureButton" parent="VBoxContainer/Win Buttons" unique_id=869492617]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_bwc64")
+texture_pressed = SubResource("AtlasTexture_85imr")
+texture_hover = SubResource("AtlasTexture_mf36t")
+
+[node name="Button Label" type="Label" parent="VBoxContainer/Win Buttons/Restart Button" unique_id=1221928520]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.13333334, 0.015686275, 1)
+theme_override_fonts/font = ExtResource("2_awi1s")
+theme_override_font_sizes/font_size = 8
+text = "RESTART"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main Menu Button" type="TextureButton" parent="VBoxContainer/Win Buttons" unique_id=165743081]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_bwc64")
+texture_pressed = SubResource("AtlasTexture_85imr")
+texture_hover = SubResource("AtlasTexture_mf36t")
+
+[node name="Button Label" type="Label" parent="VBoxContainer/Win Buttons/Main Menu Button" unique_id=1615821510]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.13333334, 0.015686275, 1)
+theme_override_fonts/font = ExtResource("2_awi1s")
+theme_override_font_sizes/font_size = 8
+text = "MAIN MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
