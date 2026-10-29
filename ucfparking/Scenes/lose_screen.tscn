@@ -41,7 +41,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
-pivot_offset = Vector2(56.5, 37)
+pivot_offset_ratio = Vector2(0.5, 0.5)
 theme_override_constants/separation = 8
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=855610621]
