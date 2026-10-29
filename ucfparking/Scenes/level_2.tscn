@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://clvkqtgba71aw"]
+
+[ext_resource type="PackedScene" uid="uid://dfqniulhhxati" path="res://Scenes/pause_menu.tscn" id="1_v3rpw"]
+
+[node name="Level 2" type="Node2D" unique_id=9753702]
+
+[node name="Label" type="Label" parent="." unique_id=1643574567]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "this is level 2"
+
+[node name="PauseMenu" parent="." unique_id=1632151657 instance=ExtResource("1_v3rpw")]
