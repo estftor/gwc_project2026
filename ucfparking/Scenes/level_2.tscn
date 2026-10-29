@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://clvkqtgba71aw"]
 
 [ext_resource type="PackedScene" uid="uid://dfqniulhhxati" path="res://Scenes/pause_menu.tscn" id="1_v3rpw"]
+[ext_resource type="PackedScene" uid="uid://3t81ia4a1vuf" path="res://Scenes/win_screen.tscn" id="2_12fag"]
+[ext_resource type="PackedScene" uid="uid://cwfmtaf3qkj1v" path="res://Scenes/lose_screen.tscn" id="3_1q6tm"]
 
 [node name="Level 2" type="Node2D" unique_id=9753702]
 
@@ -10,3 +12,7 @@ offset_bottom = 23.0
 text = "this is level 2"
 
 [node name="PauseMenu" parent="." unique_id=1632151657 instance=ExtResource("1_v3rpw")]
+
+[node name="WinScreen" parent="." unique_id=1674275575 instance=ExtResource("2_12fag")]
+
+[node name="LoseScreen" parent="." unique_id=956295192 instance=ExtResource("3_1q6tm")]

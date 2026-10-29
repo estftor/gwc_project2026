@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://3t81ia4a1vuf"]
 
 [ext_resource type="Texture2D" uid="uid://cffq3514bkory" path="res://Assets/UI/start menu buttons.png" id="1_a00f1"]
+[ext_resource type="Script" uid="uid://mb82mtahi6ya" path="res://Scenes/win_screen.gd" id="1_awi1s"]
 [ext_resource type="FontFile" uid="uid://warafq12toru" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="2_awi1s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwc64"]
@@ -16,6 +17,8 @@ atlas = ExtResource("1_a00f1")
 region = Rect2(2, 55, 113, 25)
 
 [node name="WinScreen" type="CanvasLayer" unique_id=1674275575]
+process_mode = 3
+script = ExtResource("1_awi1s")
 
 [node name="Dim" type="ColorRect" parent="." unique_id=1314959254]
 anchors_preset = 15
@@ -37,10 +40,14 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
+pivot_offset = Vector2(56.5, 51.5)
+theme_override_constants/separation = 8
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=855610621]
 layout_mode = 2
-theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = ExtResource("2_awi1s")
+theme_override_font_sizes/font_size = 12
 text = "You Win!"
 horizontal_alignment = 1
 
@@ -127,3 +134,7 @@ theme_override_font_sizes/font_size = 8
 text = "MAIN MENU"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Win Buttons/Next Level Button" to="." method="_on_next_level_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Win Buttons/Restart Button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Win Buttons/Main Menu Button" to="." method="_on_main_menu_button_pressed"]
