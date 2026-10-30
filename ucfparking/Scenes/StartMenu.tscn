@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b2sdy72dmgycl"]
 
-[ext_resource type="Texture2D" uid="uid://skvla8syq3ob" path="res://Assets/temp background.png" id="1_dl0pg"]
 [ext_resource type="Script" uid="uid://c45pyipho0ter" path="res://Scenes/start_menu.gd" id="1_h303d"]
+[ext_resource type="Texture2D" uid="uid://n4urhw8fv1rv" path="res://Assets/UI/startscreen.png" id="2_dibtv"]
 [ext_resource type="Texture2D" uid="uid://cffq3514bkory" path="res://Assets/UI/start menu buttons.png" id="2_dl0pg"]
 [ext_resource type="FontFile" uid="uid://warafq12toru" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="3_dl0pg"]
 [ext_resource type="Script" uid="uid://t3xu53t6510p" path="res://Scenes/settings_menu.gd" id="5_o42a4"]
@@ -98,11 +98,10 @@ grow_vertical = 2
 script = ExtResource("1_h303d")
 
 [node name="Background" type="TextureRect" parent="." unique_id=477838863]
-visible = false
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 360.0
-texture = ExtResource("1_dl0pg")
+texture = ExtResource("2_dibtv")
 
 [node name="Main Menu Buttons" type="VBoxContainer" parent="." unique_id=1446113530]
 layout_mode = 1

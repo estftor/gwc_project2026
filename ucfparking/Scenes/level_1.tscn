@@ -223,6 +223,10 @@ sources/0 = SubResource("TileSetAtlasSource_7p6j4")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfk5q"]
 size = Vector2(181, 218)
 
+[ext_resource type="PackedScene" uid="uid://dfqniulhhxati" path="res://Scenes/pause_menu.tscn" id="1_vk57k"]
+[ext_resource type="PackedScene" uid="uid://3t81ia4a1vuf" path="res://Scenes/win_screen.tscn" id="2_8ffim"]
+[ext_resource type="PackedScene" uid="uid://cwfmtaf3qkj1v" path="res://Scenes/lose_screen.tscn" id="3_xfk5q"]
+
 [node name="Level 1" type="Node2D" unique_id=9753702]
 
 [node name="Background" type="TextureRect" parent="." unique_id=565389959]
@@ -257,3 +261,10 @@ position = Vector2(164.00002, 206)
 rotation = -1.5707964
 scale = Vector2(1.3, 1.281)
 texture = ExtResource("3_xfk5q")
+
+[node name="PauseMenu" parent="." unique_id=1632151657 instance=ExtResource("1_vk57k")]
+
+[node name="WinScreen" parent="." unique_id=1674275575 instance=ExtResource("2_8ffim")]
+next_level_path = "uid://clvkqtgba71aw"
+
+[node name="LoseScreen" parent="." unique_id=445624961 instance=ExtResource("3_xfk5q")]
