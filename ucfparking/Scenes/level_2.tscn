@@ -23,6 +23,7 @@ texture = ExtResource("2_2mgoq")
 [node name="TimeLabel" type="Label" parent="." unique_id=1643574567]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("5_v36qu")
 text = "Timer"
 
 [node name="PauseMenu" parent="." unique_id=1632151657 instance=ExtResource("1_v3rpw")]
@@ -67,12 +68,12 @@ offset_bottom = 26.0
 show_percentage = false
 
 [node name="AnnoyanceLabel" type="Label" parent="." unique_id=1584557395]
-offset_left = 326.0
-offset_top = 9.0
-offset_right = 470.0
-offset_bottom = 25.0
+offset_left = 396.0
+offset_top = 14.0
+offset_right = 468.0
+offset_bottom = 22.0
 theme_override_fonts/font = ExtResource("5_v36qu")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 8
 text = "Annoyance"
 
 [node name="ProfessorTimer" type="Timer" parent="." unique_id=1223102218]
