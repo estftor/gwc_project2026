@@ -19,6 +19,8 @@ func _process(delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE and not event.echo:
 		$HornSound.play()
+		$Car/Sprite2D.scale = Vector2(0.72, 0.72)
+		create_tween().tween_property($Car/Sprite2D, "scale", Vector2(0.6,0.6), 0.12)
 		scatteredCount = 0
 		professorHonked = false
 		for area in $Car/HonkZone.get_overlapping_areas():
