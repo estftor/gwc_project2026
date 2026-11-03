@@ -84,6 +84,13 @@ autostart = true
 stream = ExtResource("7_055b2")
 bus = &"SFX"
 
+[node name="GradeLabel" type="Label" parent="." unique_id=1340851938]
+offset_top = 24.0
+offset_right = 128.0
+offset_bottom = 40.0
+theme_override_fonts/font = ExtResource("5_v36qu")
+text = "Grade: A"
+
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]
 [connection signal="timeout" from="ProfessorTimer" to="." method="_on_professor_timer_timeout"]

@@ -1,11 +1,12 @@
 extends Node2D
 const STUDENT_SCENE = preload("res://Scenes/student.tscn")
 const PROFESSOR_SCENE = preload("res://Scenes/professor.tscn")
+const GRADES = ["A", "B", "C", "F"]
 var professorHonked: bool = false
 @export var annoyedHit: int = 10
+@export var wastedHonk: int = 15
 var hits = 0
 var annoyance: float = 0.0
-@export var wastedHonk: int = 15
 var scatteredCount: int = 0
 
 
@@ -42,6 +43,7 @@ func _on_spawn_timer_timeout() -> void:
 	
 func student_hit() -> void:
 	hits += 1
+	$GradeLabel.text = "Grade: " + GRADES[min(hits,3)]
 	if hits >= 3:
 		$LoseScreen.show_screen()
 
