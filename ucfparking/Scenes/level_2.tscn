@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://clvkqtgba71aw"]
 
+[ext_resource type="Script" uid="uid://bhjc614de4bkg" path="res://Scenes/level_2.gd" id="1_1q6tm"]
 [ext_resource type="PackedScene" uid="uid://dfqniulhhxati" path="res://Scenes/pause_menu.tscn" id="1_v3rpw"]
 [ext_resource type="PackedScene" uid="uid://3t81ia4a1vuf" path="res://Scenes/win_screen.tscn" id="2_12fag"]
 [ext_resource type="PackedScene" uid="uid://cwfmtaf3qkj1v" path="res://Scenes/lose_screen.tscn" id="3_1q6tm"]
 
 [node name="Level 2" type="Node2D" unique_id=9753702]
+script = ExtResource("1_1q6tm")
 
 [node name="Label" type="Label" parent="." unique_id=1643574567]
 offset_right = 40.0
@@ -12,7 +14,18 @@ offset_bottom = 23.0
 text = "this is level 2"
 
 [node name="PauseMenu" parent="." unique_id=1632151657 instance=ExtResource("1_v3rpw")]
+visible = false
 
 [node name="WinScreen" parent="." unique_id=1674275575 instance=ExtResource("2_12fag")]
+visible = false
 
 [node name="LoseScreen" parent="." unique_id=956295192 instance=ExtResource("3_1q6tm")]
+visible = false
+
+[node name="Car" type="Node2D" parent="." unique_id=1429234711]
+position = Vector2(297, 290)
+
+[node name="ColorRect" type="ColorRect" parent="Car" unique_id=636302554]
+offset_right = 40.0
+offset_bottom = 70.0
+color = Color(1, 0.20392157, 0.08235294, 1)
