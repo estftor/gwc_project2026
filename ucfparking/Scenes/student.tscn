@@ -1,18 +1,16 @@
 [gd_scene format=3 uid="uid://cy72benv3786d"]
 
 [ext_resource type="Script" uid="uid://cycliyv3nohab" path="res://Scenes/student.gd" id="1_6e7ju"]
+[ext_resource type="Texture2D" uid="uid://dmn8yyh4u18mi" path="res://Assets/Characters/Student.png" id="2_tjbwp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kfop"]
 
 [node name="Student" type="Area2D" unique_id=1370826862]
 script = ExtResource("1_6e7ju")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=305822979]
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(0.10980392, 0.5411765, 0.03529412, 1)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2046815199]
+texture_filter = 1
+texture = ExtResource("2_tjbwp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=812642964]
 shape = SubResource("CircleShape2D_4kfop")

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://vbtq1avbhx02"]
 
 [ext_resource type="Script" uid="uid://db6g3cg8qj4ks" path="res://Scenes/professor.gd" id="1_fpuyx"]
+[ext_resource type="Texture2D" uid="uid://thkdmetruxab" path="res://Assets/Characters/Professor.png" id="2_frqwl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kfop"]
 radius = 12.0
@@ -8,12 +9,9 @@ radius = 12.0
 [node name="Professor" type="Area2D" unique_id=781801192]
 script = ExtResource("1_fpuyx")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=592861894]
-offset_left = -12.0
-offset_top = -12.0
-offset_right = 12.0
-offset_bottom = 12.0
-color = Color(0.8980392, 0.2, 1, 1)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2006650346]
 shape = SubResource("CircleShape2D_4kfop")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=12773685]
+texture_filter = 1
+texture = ExtResource("2_frqwl")

@@ -1,7 +1,7 @@
 extends Area2D
 @export var speed: float = 60.0
 var direction: float = 1.0
-@export var professorHit: int = 20
+@export var professorHit: int = 10
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -10,5 +10,5 @@ func _process(delta: float) -> void:
 		queue_free()
 		
 func scatter() -> void:
-	$ColorRect.color = Color.RED
+	$Sprite2D.modulate = Color.RED
 	get_parent().add_annoyance(professorHit)
