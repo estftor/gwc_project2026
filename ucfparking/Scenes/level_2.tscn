@@ -10,7 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://b8y68p3e8pycw" path="res://Assets/Audio/horn.mp3" id="7_055b2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kfop"]
-radius = 80.0
+radius = 60.0
 
 [node name="Level 2" type="Node2D" unique_id=9753702]
 script = ExtResource("1_1q6tm")
@@ -77,7 +77,7 @@ theme_override_font_sizes/font_size = 8
 text = "Annoyance"
 
 [node name="ProfessorTimer" type="Timer" parent="." unique_id=1223102218]
-wait_time = 8.0
+wait_time = 6.0
 autostart = true
 
 [node name="HornSound" type="AudioStreamPlayer" parent="." unique_id=661306839]
