@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="ucfparking"
-run/main_scene="uid://clvkqtgba71aw"
+run/main_scene="uid://cxva863om0ndh"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
 [display]
