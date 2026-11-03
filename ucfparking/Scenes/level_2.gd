@@ -7,9 +7,5 @@ func _ready() -> void:
 
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE:
+	if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE and not event.echo:
 		print("HONK!")
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
