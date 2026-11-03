@@ -1,5 +1,7 @@
 extends Node2D
 const STUDENT_SCENE = preload("res://Scenes/student.tscn")
+const PROFESSOR_SCENE = preload("res://Scenes/professor.tscn")
+
 var hits = 0
 var annoyance: float = 0.0
 
@@ -37,3 +39,14 @@ func add_annoyance(amount: float) -> void:
 	annoyance += amount
 	if annoyance >= 100:
 		$LoseScreen.show_screen()
+
+
+func _on_professor_timer_timeout() -> void:
+	var professor = PROFESSOR_SCENE.instantiate()
+	if randf() < 0.5:
+		professor.position = Vector2(-20, 220)
+		professor.direction = 1.0
+	else:
+		professor.position = Vector2(660, 220)
+		professor.direction = 1.0
+	add_child(professor)

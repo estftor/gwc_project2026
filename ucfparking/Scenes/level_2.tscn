@@ -65,5 +65,10 @@ theme_override_fonts/font = ExtResource("5_v36qu")
 theme_override_font_sizes/font_size = 16
 text = "Annoyance"
 
+[node name="ProfessorTimer" type="Timer" parent="." unique_id=1223102218]
+wait_time = 8.0
+autostart = true
+
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]
+[connection signal="timeout" from="ProfessorTimer" to="." method="_on_professor_timer_timeout"]
