@@ -1,5 +1,5 @@
 extends Node2D
-
+const STUDENT_SCENE = preload("res://Scenes/student.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,3 +11,9 @@ func _input(event: InputEvent) -> void:
 		print("HONK!")
 		for area in $Car/HonkZone.get_overlapping_areas():
 			area.scatter()
+
+
+func _on_spawn_timer_timeout() -> void:
+	var student = STUDENT_SCENE.instantiate()
+	student.position = Vector2(randf_range(290, 345), -20)
+	add_child(student)

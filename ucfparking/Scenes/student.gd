@@ -18,6 +18,9 @@ func _process(delta: float) -> void:
 	else:
 		position.y += speed * delta
 		
+	if position.x > 660 or position.y > 380:
+		queue_free()
+		
 		
 func scatter() -> void:
 	scattered = true
