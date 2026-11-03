@@ -11,10 +11,10 @@ radius = 80.0
 [node name="Level 2" type="Node2D" unique_id=9753702]
 script = ExtResource("1_1q6tm")
 
-[node name="Label" type="Label" parent="." unique_id=1643574567]
+[node name="TimeLabel" type="Label" parent="." unique_id=1643574567]
 offset_right = 40.0
 offset_bottom = 23.0
-text = "this is level 2"
+text = "This is level 2"
 
 [node name="PauseMenu" parent="." unique_id=1632151657 instance=ExtResource("1_v3rpw")]
 visible = false
@@ -43,4 +43,10 @@ shape = SubResource("CircleShape2D_4kfop")
 wait_time = 1.5
 autostart = true
 
+[node name="LevelTimer" type="Timer" parent="." unique_id=2099438205]
+wait_time = 45.0
+one_shot = true
+autostart = true
+
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]

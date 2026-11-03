@@ -3,10 +3,9 @@ const STUDENT_SCENE = preload("res://Scenes/student.tscn")
 var hits = 0
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
+func _process(_delta: float) -> void:
+	$TimeLabel.text = str(ceili($LevelTimer.time_left))
+	
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE and not event.echo:
@@ -26,3 +25,7 @@ func student_hit() -> void:
 	print("Hits: ", hits)
 	if hits >= 3:
 		$LoseScreen.show_screen()
+
+
+func _on_level_timer_timeout() -> void:
+	$WinScreen.show_screen()
