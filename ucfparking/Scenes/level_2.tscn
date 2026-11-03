@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bhjc614de4bkg" path="res://Scenes/level_2.gd" id="1_1q6tm"]
 [ext_resource type="PackedScene" uid="uid://dfqniulhhxati" path="res://Scenes/pause_menu.tscn" id="1_v3rpw"]
+[ext_resource type="Texture2D" uid="uid://skvla8syq3ob" path="res://Assets/temp background.png" id="2_2mgoq"]
 [ext_resource type="PackedScene" uid="uid://3t81ia4a1vuf" path="res://Scenes/win_screen.tscn" id="2_12fag"]
 [ext_resource type="PackedScene" uid="uid://cwfmtaf3qkj1v" path="res://Scenes/lose_screen.tscn" id="3_1q6tm"]
 [ext_resource type="Texture2D" uid="uid://ds1f1ryj0a1fu" path="res://Scenes/hyundai_elantra_sprite.webp" id="5_cggpd"]
@@ -13,6 +14,11 @@ radius = 80.0
 
 [node name="Level 2" type="Node2D" unique_id=9753702]
 script = ExtResource("1_1q6tm")
+
+[node name="Background" type="TextureRect" parent="." unique_id=443277756]
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("2_2mgoq")
 
 [node name="TimeLabel" type="Label" parent="." unique_id=1643574567]
 offset_right = 40.0
