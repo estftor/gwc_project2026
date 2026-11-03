@@ -1,5 +1,7 @@
 extends Node2D
 const STUDENT_SCENE = preload("res://Scenes/student.tscn")
+var hits = 0
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,3 +19,10 @@ func _on_spawn_timer_timeout() -> void:
 	var student = STUDENT_SCENE.instantiate()
 	student.position = Vector2(randf_range(290, 345), -20)
 	add_child(student)
+	
+	
+func student_hit() -> void:
+	hits += 1
+	print("Hits: ", hits)
+	if hits >= 3:
+		$LoseScreen.show_screen()
