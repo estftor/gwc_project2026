@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dfqniulhhxati" path="res://Scenes/pause_menu.tscn" id="1_v3rpw"]
 [ext_resource type="PackedScene" uid="uid://3t81ia4a1vuf" path="res://Scenes/win_screen.tscn" id="2_12fag"]
 [ext_resource type="PackedScene" uid="uid://cwfmtaf3qkj1v" path="res://Scenes/lose_screen.tscn" id="3_1q6tm"]
+[ext_resource type="FontFile" uid="uid://warafq12toru" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="5_v36qu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kfop"]
 radius = 80.0
@@ -14,7 +15,7 @@ script = ExtResource("1_1q6tm")
 [node name="TimeLabel" type="Label" parent="." unique_id=1643574567]
 offset_right = 40.0
 offset_bottom = 23.0
-text = "This is level 2"
+text = "Timer"
 
 [node name="PauseMenu" parent="." unique_id=1632151657 instance=ExtResource("1_v3rpw")]
 visible = false
@@ -47,6 +48,22 @@ autostart = true
 wait_time = 45.0
 one_shot = true
 autostart = true
+
+[node name="AnnoyanceBar" type="ProgressBar" parent="." unique_id=896218116]
+offset_left = 470.0
+offset_top = 10.0
+offset_right = 630.0
+offset_bottom = 26.0
+show_percentage = false
+
+[node name="AnnoyanceLabel" type="Label" parent="." unique_id=1584557395]
+offset_left = 326.0
+offset_top = 9.0
+offset_right = 470.0
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("5_v36qu")
+theme_override_font_sizes/font_size = 16
+text = "Annoyance"
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]
