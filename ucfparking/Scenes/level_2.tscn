@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dfqniulhhxati" path="res://Scenes/pause_menu.tscn" id="1_v3rpw"]
 [ext_resource type="PackedScene" uid="uid://3t81ia4a1vuf" path="res://Scenes/win_screen.tscn" id="2_12fag"]
 [ext_resource type="PackedScene" uid="uid://cwfmtaf3qkj1v" path="res://Scenes/lose_screen.tscn" id="3_1q6tm"]
+[ext_resource type="PackedScene" uid="uid://cy72benv3786d" path="res://Scenes/student.tscn" id="5_v36qu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kfop"]
 radius = 80.0
@@ -38,3 +39,6 @@ position = Vector2(20, -60)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Car/HonkZone" unique_id=1114904498]
 shape = SubResource("CircleShape2D_4kfop")
+
+[node name="Student" parent="." unique_id=1370826862 instance=ExtResource("5_v36qu")]
+position = Vector2(317, 0)
