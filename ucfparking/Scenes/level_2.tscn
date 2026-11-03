@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dfqniulhhxati" path="res://Scenes/pause_menu.tscn" id="1_v3rpw"]
 [ext_resource type="PackedScene" uid="uid://3t81ia4a1vuf" path="res://Scenes/win_screen.tscn" id="2_12fag"]
 [ext_resource type="PackedScene" uid="uid://cwfmtaf3qkj1v" path="res://Scenes/lose_screen.tscn" id="3_1q6tm"]
+[ext_resource type="Texture2D" uid="uid://ds1f1ryj0a1fu" path="res://Scenes/hyundai_elantra_sprite.webp" id="5_cggpd"]
 [ext_resource type="FontFile" uid="uid://warafq12toru" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="5_v36qu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4kfop"]
@@ -29,10 +30,12 @@ visible = false
 [node name="Car" type="Node2D" parent="." unique_id=1429234711]
 position = Vector2(297, 290)
 
-[node name="ColorRect" type="ColorRect" parent="Car" unique_id=636302554]
-offset_right = 40.0
-offset_bottom = 70.0
-color = Color(1, 0.20392157, 0.08235294, 1)
+[node name="Sprite2D" type="Sprite2D" parent="Car" unique_id=1155312626]
+position = Vector2(20, 35)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_cggpd")
+region_enabled = true
+region_rect = Rect2(0, 0, 84, 124)
 
 [node name="HonkZone" type="Area2D" parent="Car" unique_id=230933747]
 position = Vector2(20, -60)
