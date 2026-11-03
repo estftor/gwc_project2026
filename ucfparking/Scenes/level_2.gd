@@ -43,6 +43,8 @@ func _on_spawn_timer_timeout() -> void:
 	
 func student_hit() -> void:
 	hits += 1
+	$HitFlash.modulate.a = 0.5
+	create_tween().tween_property($HitFlash, "modulate:a", 0.0, 0.25)
 	$GradeLabel.text = "Grade: " + GRADES[min(hits,3)]
 	if hits >= 3:
 		$LoseScreen.show_screen()

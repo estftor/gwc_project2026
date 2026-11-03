@@ -91,6 +91,12 @@ offset_bottom = 40.0
 theme_override_fonts/font = ExtResource("5_v36qu")
 text = "Grade: A"
 
+[node name="HitFlash" type="ColorRect" parent="." unique_id=1877691327]
+modulate = Color(1, 1, 1, 0)
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(1, 0.078431375, 0, 1)
+
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]
 [connection signal="timeout" from="ProfessorTimer" to="." method="_on_professor_timer_timeout"]
