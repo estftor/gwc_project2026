@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c00t7d2lj1ukv"]
+
+[ext_resource type="Texture2D" uid="uid://c5l3deogenvum" path="res://Assets/UI/hyundai_elantra_sprite_white.png" id="1_ambu4"]
+
+[node name="Drive" type="Area2D" unique_id=2111731179]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1991150177]
+position = Vector2(277, 218)
+texture = ExtResource("1_ambu4")
