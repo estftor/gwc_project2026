@@ -53,6 +53,7 @@ func student_hit() -> void:
 
 
 func _on_level_timer_timeout() -> void:
+	$WinScreen/VBoxContainer/Label.text = "You Win! Grade: " + GRADES[hits]
 	$WinScreen.show_screen()
 
 func add_annoyance(amount: float) -> void:
