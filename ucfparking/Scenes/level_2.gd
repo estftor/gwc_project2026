@@ -14,6 +14,12 @@ func _process(delta: float) -> void:
 	$TimeLabel.text = str(ceili($LevelTimer.time_left))
 	annoyance = max(annoyance - 2 * delta, 0)
 	$AnnoyanceBar.value = annoyance
+	if annoyance >= 70:
+		$AnnoyanceBar.modulate = Color.RED
+	elif annoyance >= 50:
+		$AnnoyanceBar.modulate = Color.YELLOW
+	else:
+		$AnnoyanceBar.modulate = Color.WHITE
 	$SpawnTimer.wait_time = lerp(0.6, 1.5, $LevelTimer.time_left / 45.0)
 
 func _input(event: InputEvent) -> void:
