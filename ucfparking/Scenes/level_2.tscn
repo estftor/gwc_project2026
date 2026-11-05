@@ -348,7 +348,7 @@ wait_time = 1.5
 autostart = true
 
 [node name="LevelTimer" type="Timer" parent="." unique_id=2099438205]
-wait_time = 15.0
+wait_time = 45.0
 one_shot = true
 autostart = true
 
