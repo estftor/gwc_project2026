@@ -91,6 +91,16 @@ offset_bottom = 40.0
 theme_override_fonts/font = ExtResource("5_v36qu")
 text = "Grade: A"
 
+[node name="HintLabel" type="Label" parent="." unique_id=303609479]
+offset_left = 10.0
+offset_top = 330.0
+offset_right = 210.0
+offset_bottom = 349.0
+theme_override_fonts/font = ExtResource("5_v36qu")
+theme_override_font_sizes/font_size = 8
+text = "SPACE to honk
+Don't honk the professor!"
+
 [node name="HitFlash" type="ColorRect" parent="." unique_id=1877691327]
 modulate = Color(1, 1, 1, 0)
 offset_right = 640.0
