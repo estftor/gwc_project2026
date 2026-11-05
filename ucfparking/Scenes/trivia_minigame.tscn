@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://8k0h0n1joqjo"]
+
+[ext_resource type="Script" uid="uid://c80mbm6bwy2h1" path="res://Scenes/trivia_minigame.gd" id="1_8gds0"]
+[ext_resource type="Texture2D" uid="uid://skvla8syq3ob" path="res://Assets/temp background.png" id="2_wafrj"]
+[ext_resource type="Texture2D" uid="uid://cffq3514bkory" path="res://Assets/UI/start menu buttons.png" id="3_8th52"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i38ve"]
+texture = ExtResource("2_wafrj")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wphs"]
+atlas = ExtResource("3_8th52")
+region = Rect2(2, 3, 113, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pu4w"]
+atlas = ExtResource("3_8th52")
+region = Rect2(2, 29, 113, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1y5f"]
+atlas = ExtResource("3_8th52")
+region = Rect2(2, 55, 113, 25)
+
+[node name="trivia_minigame" type="Control" unique_id=1401451921]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8gds0")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2032573888]
+layout_mode = 1
+offset_right = 368.0
+offset_bottom = 191.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_i38ve")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=540677101]
+layout_mode = 2
+theme_override_constants/margin_top = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1397587463]
+layout_mode = 2
+theme_override_constants/separation = 17
+alignment = 1
+
+[node name="question_text" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=491449755]
+layout_mode = 2
+text = "This is the question."
+horizontal_alignment = 1
+
+[node name="options_container" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=722383149]
+layout_mode = 2
+size_flags_horizontal = 4
+offset_transform_scale = Vector2(1.3, 1.3)
+columns = 2
+
+[node name="Option 1" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/options_container" unique_id=84901051]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_7wphs")
+texture_pressed = SubResource("AtlasTexture_3pu4w")
+texture_hover = SubResource("AtlasTexture_u1y5f")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/options_container/Option 1" unique_id=1624597733]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.513
+anchor_top = 0.52000004
+anchor_right = 0.513
+anchor_bottom = 0.52000004
+offset_left = -41.969
+offset_top = -11.000001
+offset_right = 42.031
+offset_bottom = 10.999999
+theme_override_font_sizes/font_size = 12
+text = "Option1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Option 2" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/options_container" unique_id=1047373562]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_7wphs")
+texture_pressed = SubResource("AtlasTexture_3pu4w")
+texture_hover = SubResource("AtlasTexture_u1y5f")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/options_container/Option 2" unique_id=3134406]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.5
+anchor_right = 0.504
+anchor_bottom = 0.5
+offset_left = -43.952
+offset_top = -11.5
+offset_right = 44.048
+offset_bottom = 11.5
+theme_override_font_sizes/font_size = 12
+text = "Option2"
+vertical_alignment = 1
+
+[node name="Option 3" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/options_container" unique_id=421676793]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_7wphs")
+texture_pressed = SubResource("AtlasTexture_3pu4w")
+texture_hover = SubResource("AtlasTexture_u1y5f")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/options_container/Option 3" unique_id=874449805]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -11.5
+offset_right = 43.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "Option3"
+vertical_alignment = 1
+
+[node name="Option 4" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/options_container" unique_id=1124617456]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_7wphs")
+texture_pressed = SubResource("AtlasTexture_3pu4w")
+texture_hover = SubResource("AtlasTexture_u1y5f")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/options_container/Option 4" unique_id=539696108]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -11.5
+offset_right = 45.5
+offset_bottom = 11.5
+theme_override_font_sizes/font_size = 12
+text = "Option4"
+vertical_alignment = 1
