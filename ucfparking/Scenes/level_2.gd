@@ -20,13 +20,19 @@ func _process(delta: float) -> void:
 		$AnnoyanceBar.modulate = Color.YELLOW
 	else:
 		$AnnoyanceBar.modulate = Color.WHITE
-	$SpawnTimer.wait_time = lerp(0.6, 1.5, $LevelTimer.time_left / 45.0)
+	$SpawnTimer.wait_time = lerp(0.6, 1.5, $LevelTimer.time_left / $LevelTimer.wait_time)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE and not event.echo:
 		$HornSound.play()
 		$Car/Sprite2D.scale = Vector2(0.96, 0.96)
 		create_tween().tween_property($Car/Sprite2D, "scale", Vector2(0.8,0.8), 0.12)
+		var ring = $Car/HonkZone/HonkRing
+		ring.modulate.a = 1.0
+		ring.scale = Vector2(0.3, 0.3)
+		var tween = create_tween().set_parallel().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		tween.tween_property(ring, "scale", Vector2.ONE, 0.3)
+		tween.tween_property(ring, "modulate:a", 0.0, 0.3)
 		scatteredCount = 0
 		professorHonked = false
 		for area in $Car/HonkZone.get_overlapping_areas():
@@ -40,6 +46,11 @@ func _input(event: InputEvent) -> void:
 			add_annoyance(annoyedHit)
 		else:
 			annoyance = max(annoyance - 5 * scatteredCount, 0)
+			$NiceLabel.modulate.a = 1.0
+			$NiceLabel.position.y = 200
+			var nice_tween = create_tween().set_parallel()
+			nice_tween.tween_property($NiceLabel, "modulate:a", 0.0, 0.6)
+			nice_tween.tween_property($NiceLabel, "position:y", 180, 0.6)
 
 
 func _on_spawn_timer_timeout() -> void:
@@ -51,6 +62,7 @@ func _on_spawn_timer_timeout() -> void:
 	
 func student_hit() -> void:
 	hits += 1
+	$HitSound.play()
 	$HitFlash.modulate.a = 0.5
 	create_tween().tween_property($HitFlash, "modulate:a", 0.0, 0.25)
 	$GradeLabel.text = "Grade: " + GRADES[min(hits,3)]
@@ -69,8 +81,18 @@ func add_annoyance(amount: float) -> void:
 
 
 func _on_professor_timer_timeout() -> void:
+	$ProfessorTimer.wait_time = randf_range(4.0, 8.0)
+	var from_left = randf() < 0.5
+	if from_left:
+		$ProfWarning.position.x = 8
+	else:
+		$ProfWarning.position.x = 608
+	$ProfWarning.modulate.a = 1.0
+	await get_tree().create_timer(1.0,false).timeout
+	$ProfWarning.modulate.a = 0.0
+	
 	var professor = PROFESSOR_SCENE.instantiate()
-	if randf() < 0.5:
+	if from_left:
 		professor.position = Vector2(-20, 220)
 		professor.direction = 1.0
 	else:
