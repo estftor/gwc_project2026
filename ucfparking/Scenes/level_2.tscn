@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://bpt567uf81c63" path="res://Scenes/honk_ring.gd" id="9_t7v2y"]
 [ext_resource type="Script" uid="uid://dxlcnt7agpaex" path="res://Scenes/intro_card.gd" id="11_ait6c"]
 [ext_resource type="Texture2D" uid="uid://6ekd0vg3bf3b" path="res://Assets/Characters/largeprofsprite1 (1).png" id="11_t7v2y"]
+[ext_resource type="AudioStream" uid="uid://ba7xfpyrr3xio" path="res://Assets/Audio/hitHurt.wav" id="13_vcilj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_42uki"]
 texture = ExtResource("3_uhnj4")
@@ -478,6 +479,10 @@ grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_v36qu")
 theme_override_font_sizes/font_size = 12
 text = "Clear the lane... but DON'T honk at me!"
+
+[node name="HitSound" type="AudioStreamPlayer" parent="." unique_id=303042666]
+stream = ExtResource("13_vcilj")
+bus = &"SFX"
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]
