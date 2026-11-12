@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dfqniulhhxati" path="res://Scenes/pause_menu.tscn" id="1_vk57k"]
 [ext_resource type="PackedScene" uid="uid://3t81ia4a1vuf" path="res://Scenes/win_screen.tscn" id="2_8ffim"]
 [ext_resource type="PackedScene" uid="uid://cwfmtaf3qkj1v" path="res://Scenes/lose_screen.tscn" id="3_xfk5q"]
+[ext_resource type="Script" uid="uid://df0felx2qg7id" path="res://Scenes/timer_label.gd" id="4_wrinw"]
 [ext_resource type="Texture2D" uid="uid://c6ndw6aetkkxa" path="res://Assets/Garage tile map.png" id="4_xrdnt"]
 [ext_resource type="Texture2D" uid="uid://dyn1oyok78wb4" path="res://Assets/UI/hyundai_elantra_sprite.png.webp" id="6_lsmp6"]
 [ext_resource type="Script" uid="uid://2rifdgnh0mhl" path="res://Scenes/Car_body.gd" id="6_xrdnt"]
@@ -152,8 +153,8 @@ atlas = ExtResource("6_lsmp6")
 region = Rect2(3, 5, 77, 114)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mn5qr"]
-radius = 54.0
-height = 110.0
+radius = 96.0
+height = 192.0
 
 [node name="Level 1" type="Node2D" unique_id=9753702]
 metadata/_edit_vertical_guides_ = [9.0, -61.0, 640.0]
@@ -168,6 +169,16 @@ next_level_path = "uid://clvkqtgba71aw"
 
 [node name="LoseScreen" parent="." unique_id=445624961 instance=ExtResource("3_xfk5q")]
 visible = false
+
+[node name="Timer" type="CanvasLayer" parent="." unique_id=1847816738]
+offset = Vector2(20, 20)
+transform = Transform2D(1, 0, 0, 1, 20, 20)
+
+[node name="Timer label" type="Label" parent="Timer" unique_id=1804828101]
+offset_right = 40.0
+offset_bottom = 16.0
+script = ExtResource("4_wrinw")
+start_time = 5.0
 
 [node name="Tilemap" type="TileMapLayer" parent="." unique_id=1704568439]
 use_parent_material = true
@@ -195,11 +206,10 @@ position = Vector2(402, 295)
 script = ExtResource("8_wrinw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Target1" unique_id=2134567323]
-position = Vector2(-130, -909)
+position = Vector2(-68, -891)
 shape = SubResource("CapsuleShape2D_mn5qr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Target1" unique_id=1179323395]
-position = Vector2(-122.000015, -906.99994)
-rotation = 3.1415927
+position = Vector2(-65.000015, -894)
 scale = Vector2(0.4283055, 0.3539312)
 texture = ExtResource("8_xrdnt")

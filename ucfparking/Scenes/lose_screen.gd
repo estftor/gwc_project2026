@@ -1,15 +1,19 @@
 extends CanvasLayer
 
+@onready var timer_label = $"../Timer/Timer label"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visible = false
+	timer_label.time_up.connect(show_screen)
 
 #TEMP: Press L to lose, for testing. Delete when the real lose condition exists.
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and event.keycode == KEY_L:
 		if not get_tree().paused:
 			show_screen()
+
+
 
 func show_screen() -> void:
 	visible = true
