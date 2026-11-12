@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://8k0h0n1joqjo"]
 
 [ext_resource type="Script" uid="uid://c80mbm6bwy2h1" path="res://Scenes/trivia_minigame.gd" id="1_8gds0"]
-[ext_resource type="Texture2D" uid="uid://skvla8syq3ob" path="res://Assets/temp background.png" id="2_wafrj"]
+[ext_resource type="Texture2D" uid="uid://cgltb1hkb71vf" path="res://Assets/UI/parkinggarage.png" id="2_8gds0"]
 [ext_resource type="Texture2D" uid="uid://cffq3514bkory" path="res://Assets/UI/start menu buttons.png" id="3_8th52"]
+[ext_resource type="FontFile" uid="uid://warafq12toru" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="4_2bjj8"]
+[ext_resource type="Texture2D" uid="uid://cug48ipdf0uhr" path="res://Assets/UI/ProgressBar.png" id="4_wafrj"]
+[ext_resource type="Texture2D" uid="uid://cqtg7beh0rvvw" path="res://Assets/UI/ProgressBarDrain.png" id="5_8th52"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i38ve"]
-texture = ExtResource("2_wafrj")
+texture = ExtResource("2_8gds0")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7wphs"]
 atlas = ExtResource("3_8th52")
@@ -19,6 +22,18 @@ region = Rect2(2, 29, 113, 25)
 atlas = ExtResource("3_8th52")
 region = Rect2(2, 55, 113, 25)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8th52"]
+atlas = ExtResource("3_8th52")
+region = Rect2(0.5381012, 84.96146, 140.60608, 40.32025)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2bjj8"]
+atlas = ExtResource("3_8th52")
+region = Rect2(1.3887072, 127.189896, 140.12637, 39.732437)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jdid"]
+atlas = ExtResource("3_8th52")
+region = Rect2(0.81292725, 168.56287, 140.3328, 40.615936)
+
 [node name="trivia_minigame" type="Control" unique_id=1401451921]
 layout_mode = 3
 anchors_preset = 15
@@ -30,8 +45,8 @@ script = ExtResource("1_8gds0")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=2032573888]
 layout_mode = 1
-offset_right = 368.0
-offset_bottom = 191.0
+offset_right = 640.0
+offset_bottom = 360.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_i38ve")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=540677101]
@@ -40,40 +55,43 @@ theme_override_constants/margin_top = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1397587463]
 layout_mode = 2
-theme_override_constants/separation = 17
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
 alignment = 1
 
 [node name="question_text" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=491449755]
 layout_mode = 2
-text = "This is the question."
+theme_override_constants/line_spacing = 3
+text = "This is a question."
 horizontal_alignment = 1
 
 [node name="options_container" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=722383149]
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 4
+offset_transform_enabled = true
 offset_transform_scale = Vector2(1.3, 1.3)
+theme_override_constants/h_separation = 19
+theme_override_constants/v_separation = 6
 columns = 2
 
 [node name="Option 1" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/options_container" unique_id=84901051]
 layout_mode = 2
 size_flags_horizontal = 4
+offset_transform_enabled = true
 texture_normal = SubResource("AtlasTexture_7wphs")
 texture_pressed = SubResource("AtlasTexture_3pu4w")
 texture_hover = SubResource("AtlasTexture_u1y5f")
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/options_container/Option 1" unique_id=1624597733]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.513
-anchor_top = 0.52000004
-anchor_right = 0.513
-anchor_bottom = 0.52000004
-offset_left = -41.969
-offset_top = -11.000001
-offset_right = 42.031
-offset_bottom = 10.999999
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 12
-text = "Option1"
+text = "Option 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -85,17 +103,14 @@ texture_hover = SubResource("AtlasTexture_u1y5f")
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/options_container/Option 2" unique_id=3134406]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.504
-anchor_top = 0.5
-anchor_right = 0.504
-anchor_bottom = 0.5
-offset_left = -43.952
-offset_top = -11.5
-offset_right = 44.048
-offset_bottom = 11.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 12
 text = "Option2"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Option 3" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/options_container" unique_id=421676793]
@@ -106,19 +121,14 @@ texture_hover = SubResource("AtlasTexture_u1y5f")
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/options_container/Option 3" unique_id=874449805]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -43.5
-offset_top = -11.5
-offset_right = 43.5
-offset_bottom = 12.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 12
 text = "Option3"
+horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Option 4" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/options_container" unique_id=1124617456]
@@ -129,15 +139,73 @@ texture_hover = SubResource("AtlasTexture_u1y5f")
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/options_container/Option 4" unique_id=539696108]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 12
+text = "Option4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next Button" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1326625446]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_8th52")
+texture_pressed = SubResource("AtlasTexture_2bjj8")
+texture_hover = SubResource("AtlasTexture_2jdid")
+
+[node name="Button Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/Next Button" unique_id=1985610540]
+layout_mode = 1
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -38.5
+offset_left = -20.0
 offset_top = -11.5
-offset_right = 45.5
+offset_right = 20.0
 offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.13333334, 0.015686275, 1)
+theme_override_fonts/font = ExtResource("4_2bjj8")
 theme_override_font_sizes/font_size = 12
-text = "Option4"
+text = "NEXT LEVEL"
+horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=1614214216]
+wait_time = 15.0
+one_shot = true
+autostart = true
+
+[node name="TimerLabel" type="Label" parent="." unique_id=1454646982]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.97400004
+anchor_right = 0.504
+anchor_bottom = 0.97400004
+offset_left = -17.109985
+offset_top = -4.6400146
+offset_right = 16.890015
+offset_bottom = 4.360504
+theme_override_font_sizes/font_size = 8
+text = "Time"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerBar" type="TextureProgressBar" parent="." unique_id=1899402404]
+layout_mode = 0
+offset_top = -13.635
+offset_right = 640.0
+offset_bottom = 6.365
+fill_mode = 1
+nine_patch_stretch = true
+texture_under = ExtResource("4_wafrj")
+texture_progress = ExtResource("5_8th52")
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Next Button" to="." method="_on_next_button_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
