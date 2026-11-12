@@ -46,6 +46,11 @@ func _input(event: InputEvent) -> void:
 			add_annoyance(annoyedHit)
 		else:
 			annoyance = max(annoyance - 5 * scatteredCount, 0)
+			$NiceLabel.modulate.a = 1.0
+			$NiceLabel.position.y = 200
+			var nice_tween = create_tween().set_parallel()
+			nice_tween.tween_property($NiceLabel, "modulate:a", 0.0, 0.6)
+			nice_tween.tween_property($NiceLabel, "position:y", 180, 0.6)
 
 
 func _on_spawn_timer_timeout() -> void:
@@ -75,6 +80,7 @@ func add_annoyance(amount: float) -> void:
 
 
 func _on_professor_timer_timeout() -> void:
+	$ProfessorTimer.wait_time = randf_range(4.0, 8.0)
 	var from_left = randf() < 0.5
 	if from_left:
 		$ProfWarning.position.x = 8

@@ -415,6 +415,16 @@ theme_override_fonts/font = ExtResource("5_v36qu")
 theme_override_font_sizes/font_size = 24
 text = "!"
 
+[node name="NiceLabel" type="Label" parent="." unique_id=368972898]
+modulate = Color(1, 1, 1, 0)
+offset_left = 270.0
+offset_top = 200.0
+offset_right = 350.0
+offset_bottom = 216.0
+theme_override_colors/font_color = Color(0.20392157, 0.75686276, 0.015686275, 1)
+theme_override_fonts/font = ExtResource("5_v36qu")
+text = "NICE!"
+
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="LevelTimer" to="." method="_on_level_timer_timeout"]
 [connection signal="timeout" from="ProfessorTimer" to="." method="_on_professor_timer_timeout"]
