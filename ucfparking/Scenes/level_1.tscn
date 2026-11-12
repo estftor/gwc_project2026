@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c6ndw6aetkkxa" path="res://Assets/Garage tile map.png" id="4_xrdnt"]
 [ext_resource type="Texture2D" uid="uid://dyn1oyok78wb4" path="res://Assets/UI/hyundai_elantra_sprite.png.webp" id="6_lsmp6"]
 [ext_resource type="Script" uid="uid://2rifdgnh0mhl" path="res://Scenes/Car_body.gd" id="6_xrdnt"]
-[ext_resource type="Texture2D" uid="uid://syd65kdp4lu8" path="res://Assets/UI/tempExclamation.jpg" id="8_xrdnt"]
+[ext_resource type="Script" uid="uid://brfl1ilcsfw2g" path="res://Scenes/target_1.gd" id="8_wrinw"]
+[ext_resource type="Texture2D" uid="uid://cy0pukccyuakw" path="res://Assets/UI/d37f7d60-ee39-491e-8f13-d43f95b68a58.png" id="9_chwpn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6444e"]
 texture = ExtResource("4_xrdnt")
@@ -185,8 +186,9 @@ shape = SubResource("CapsuleShape2D_uud5k")
 [node name="Player Sprite" type="Sprite2D" parent="Player Car" unique_id=1924524929]
 texture = SubResource("AtlasTexture_uud5k")
 
-[node name="Target1" type="CharacterBody2D" parent="." unique_id=1532192261]
+[node name="Target1" type="Area2D" parent="." unique_id=618671502]
 position = Vector2(402, 295)
+script = ExtResource("8_wrinw")
 
 [node name="Sprite2D" type="Sprite2D" parent="Target1" unique_id=1179323395]
 position = Vector2(-66.00001, -845.99994)
