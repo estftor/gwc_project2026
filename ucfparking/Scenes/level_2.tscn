@@ -6,9 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://cwfmtaf3qkj1v" path="res://Scenes/lose_screen.tscn" id="3_1q6tm"]
 [ext_resource type="Texture2D" uid="uid://c5l3deogenvum" path="res://Assets/UI/hyundai_elantra_sprite_white.png" id="3_42uki"]
 [ext_resource type="Texture2D" uid="uid://boek3ifyl6fxg" path="res://Assets/Garage_tile_map.png" id="3_uhnj4"]
-[ext_resource type="Texture2D" uid="uid://ds1f1ryj0a1fu" path="res://Scenes/hyundai_elantra_sprite.webp" id="5_cggpd"]
 [ext_resource type="FontFile" uid="uid://warafq12toru" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="5_v36qu"]
 [ext_resource type="AudioStream" uid="uid://b8y68p3e8pycw" path="res://Assets/Audio/horn.mp3" id="7_055b2"]
+[ext_resource type="Texture2D" uid="uid://b0j745ve0vqhy" path="res://Assets/UI/hyundai_elantra_sprite.png" id="8_42uki"]
+[ext_resource type="Script" uid="uid://bpt567uf81c63" path="res://Scenes/honk_ring.gd" id="9_t7v2y"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_42uki"]
 texture = ExtResource("3_uhnj4")
@@ -333,15 +334,19 @@ position = Vector2(297, 290)
 [node name="Sprite2D" type="Sprite2D" parent="Car" unique_id=1155312626]
 position = Vector2(9, 22)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("5_cggpd")
+texture = ExtResource("8_42uki")
 region_enabled = true
 region_rect = Rect2(0, 0, 84, 124)
 
 [node name="HonkZone" type="Area2D" parent="Car" unique_id=230933747]
-position = Vector2(9, -60)
+position = Vector2(9, -82)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Car/HonkZone" unique_id=1114904498]
 shape = SubResource("CircleShape2D_4kfop")
+
+[node name="HonkRing" type="Node2D" parent="Car/HonkZone" unique_id=7051111]
+modulate = Color(1, 1, 1, 0)
+script = ExtResource("9_t7v2y")
 
 [node name="SpawnTimer" type="Timer" parent="." unique_id=29494664]
 wait_time = 1.5

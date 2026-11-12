@@ -27,6 +27,12 @@ func _input(event: InputEvent) -> void:
 		$HornSound.play()
 		$Car/Sprite2D.scale = Vector2(0.96, 0.96)
 		create_tween().tween_property($Car/Sprite2D, "scale", Vector2(0.8,0.8), 0.12)
+		var ring = $Car/HonkZone/HonkRing
+		ring.modulate.a = 1.0
+		ring.scale = Vector2(0.3, 0.3)
+		var tween = create_tween().set_parallel().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUAD)
+		tween.tween_property(ring, "scale", Vector2.ONE, 0.3)
+		tween.tween_property(ring, "modulate:a", 0.0, 0.3)
 		scatteredCount = 0
 		professorHonked = false
 		for area in $Car/HonkZone.get_overlapping_areas():
