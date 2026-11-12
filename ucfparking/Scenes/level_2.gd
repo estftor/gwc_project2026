@@ -75,8 +75,17 @@ func add_annoyance(amount: float) -> void:
 
 
 func _on_professor_timer_timeout() -> void:
+	var from_left = randf() < 0.5
+	if from_left:
+		$ProfWarning.position.x = 8
+	else:
+		$ProfWarning.position.x = 608
+	$ProfWarning.modulate.a = 1.0
+	await get_tree().create_timer(1.0,false).timeout
+	$ProfWarning.modulate.a = 0.0
+	
 	var professor = PROFESSOR_SCENE.instantiate()
-	if randf() < 0.5:
+	if from_left:
 		professor.position = Vector2(-20, 220)
 		professor.direction = 1.0
 	else:
