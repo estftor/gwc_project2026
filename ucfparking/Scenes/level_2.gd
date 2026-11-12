@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 		$AnnoyanceBar.modulate = Color.YELLOW
 	else:
 		$AnnoyanceBar.modulate = Color.WHITE
-	$SpawnTimer.wait_time = lerp(0.6, 1.5, $LevelTimer.time_left / 45.0)
+	$SpawnTimer.wait_time = lerp(0.6, 1.5, $LevelTimer.time_left / $LevelTimer.wait_time)
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and event.keycode == KEY_SPACE and not event.echo:
