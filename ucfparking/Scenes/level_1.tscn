@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dyn1oyok78wb4" path="res://Assets/UI/hyundai_elantra_sprite.png.webp" id="6_lsmp6"]
 [ext_resource type="Script" uid="uid://2rifdgnh0mhl" path="res://Scenes/Car_body.gd" id="6_xrdnt"]
 [ext_resource type="Script" uid="uid://brfl1ilcsfw2g" path="res://Scenes/target_1.gd" id="8_wrinw"]
-[ext_resource type="Texture2D" uid="uid://cy0pukccyuakw" path="res://Assets/UI/d37f7d60-ee39-491e-8f13-d43f95b68a58.png" id="9_chwpn"]
+[ext_resource type="Texture2D" uid="uid://dc6uvr0xgcadv" path="res://Assets/Characters/largeprofsprite2 (2).png" id="8_xrdnt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6444e"]
 texture = ExtResource("4_xrdnt")
@@ -151,6 +151,10 @@ height = 116.0
 atlas = ExtResource("6_lsmp6")
 region = Rect2(3, 5, 77, 114)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mn5qr"]
+radius = 54.0
+height = 110.0
+
 [node name="Level 1" type="Node2D" unique_id=9753702]
 metadata/_edit_vertical_guides_ = [9.0, -61.0, 640.0]
 metadata/_edit_horizontal_guides_ = [362.0]
@@ -190,7 +194,12 @@ texture = SubResource("AtlasTexture_uud5k")
 position = Vector2(402, 295)
 script = ExtResource("8_wrinw")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Target1" unique_id=2134567323]
+position = Vector2(-130, -909)
+shape = SubResource("CapsuleShape2D_mn5qr")
+
 [node name="Sprite2D" type="Sprite2D" parent="Target1" unique_id=1179323395]
-position = Vector2(-66.00001, -845.99994)
-scale = Vector2(0.075360976, 0.067238264)
+position = Vector2(-122.000015, -906.99994)
+rotation = 3.1415927
+scale = Vector2(0.4283055, 0.3539312)
 texture = ExtResource("8_xrdnt")
