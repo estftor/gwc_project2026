@@ -1,0 +1,397 @@
+[gd_scene format=4 uid="uid://bbe2a8sawsl5p"]
+
+[ext_resource type="Script" uid="uid://cjp3tq0uuco5d" path="res://Scenes/ending.gd" id="1_6u0w7"]
+[ext_resource type="Texture2D" uid="uid://b0j745ve0vqhy" path="res://Assets/UI/hyundai_elantra_sprite.png" id="2_bxiex"]
+[ext_resource type="Texture2D" uid="uid://c6ndw6aetkkxa" path="res://Assets/Garage tile map.png" id="2_ib4ol"]
+[ext_resource type="Texture2D" uid="uid://boek3ifyl6fxg" path="res://Assets/Garage_tile_map.png" id="3_bfdlc"]
+[ext_resource type="FontFile" uid="uid://warafq12toru" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="3_ib4ol"]
+[ext_resource type="Texture2D" uid="uid://cffq3514bkory" path="res://Assets/UI/start menu buttons.png" id="4_bxiex"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bfdlc"]
+texture = ExtResource("2_ib4ol")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.50494, -16, 16, -16, 16, 16, 3.50494, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 4.4608307, -16, 3.8235703, 16, -16, 16)
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 4.4608307, -16, 3.8235703, 16, -16, 16)
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 4.4608307, -16, 3.8235703, 16, -16, 16)
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.50494, -16, 16, -16, 16, 16, 3.50494, 16)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 4.4608307, -16, 3.8235703, 16, -16, 16)
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.7353554, -16, 16, -16, 16, 16, 5.098091, 16)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -4.779461, -16, -5.098091, 16, -16, 16)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.098091, 4.779461, 16, 6.0539856, 16, 16, 5.098091, 16)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.098091, 16, 6.0539856, 16, 16, -16, 16)
+4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-0.63726044, -16, 16, -16, 16, 16, -9.558922, 16)
+5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:4/0 = 0
+7:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.7353554, -16, 16, -16, 16, 16, 5.098091, 16)
+1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -4.779461, -16, -5.098091, 16, -16, 16)
+2:5/0 = 0
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.7353554, -16, 16, -16, 16, 16, 5.098091, 16)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -7.0098763, -5.4167233, -5.4167233, -6.0539837, 16, -16, 16)
+4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.921661, -16, 16, -16, 16, 16, -4.1422005, 10.196184)
+5:5/0 = 0
+5:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+6:5/0 = 0
+6:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+7:5/0 = 0
+7:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.7353554, -16, 16, -16, 16, 16, 5.098091, 16)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -4.779461, -16, -5.098091, 16, -16, 16)
+2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.098091, 4.779461, 16, 6.0539856, 16, 16, 5.098091, 16)
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 5.098091, 16, 6.0539856, 16, 16, -16, 16)
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(5.7353554, -16, 16, -16, 16, 16, 5.098091, 16)
+3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -7.0098763, -5.4167233, -5.4167233, -6.0539837, 16, -16, 16)
+4:7/0 = 0
+4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 6.372616, 16, 6.0539856, 16, 16, -16, 16)
+5:7/0 = 0
+5:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 6.372616, 16, 6.0539856, 16, 16, -16, 16)
+6:7/0 = 0
+6:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 6.372616, 16, 6.0539856, 16, 16, -16, 16)
+7:7/0 = 0
+0:8/0 = 0
+0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.9117851, 1.9117851, 16, 1.9117851, 16, 16, 1.9117851, 16)
+1:8/0 = 0
+1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 2.5490456, 16, 1.9117851, 16, 16, -16, 16)
+2:8/0 = 0
+2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.9117851, 1.9117851, 16, 1.9117851, 16, 16, 1.9117851, 16)
+3:8/0 = 0
+3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, 2.5490456, 16, 1.9117851, 16, 16, -16, 16)
+4:8/0 = 0
+4:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -5.098093, -16, -6.0539856)
+5:8/0 = 0
+5:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -5.098093, -16, -6.0539856)
+6:8/0 = 0
+6:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -5.098093, -16, -6.0539856)
+7:8/0 = 0
+0:9/0 = 0
+0:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.63726044, -16, 16, -16, 16, 1.9117851, 16, 16, 1.9117851, 16)
+1:9/0 = 0
+1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -0.95589256, -2.8676777, -2.2304153, -1.5931549, 16, -16, 16)
+2:9/0 = 0
+2:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.63726044, -16, 16, -16, 16, 1.9117851, 16, 16, 1.9117851, 16)
+3:9/0 = 0
+3:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -0.95589256, -0.63726044, -0.31863022, -1.5931549, 16, -16, 16)
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:0/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+9:2/0 = 0
+9:3/0 = 0
+10:3/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+11:5/0 = 0
+11:6/0 = 0
+10:2/0 = 0
+10:1/0 = 0
+10:0/0 = 0
+9:0/0 = 0
+11:0/0 = 0
+11:1/0 = 0
+11:2/0 = 0
+11:3/0 = 0
+11:7/0 = 0
+11:8/0 = 0
+11:9/0 = 0
+10:9/0 = 0
+9:9/0 = 0
+8:9/0 = 0
+8:8/0 = 0
+8:7/0 = 0
+8:6/0 = 0
+8:5/0 = 0
+8:4/0 = 0
+8:3/0 = 0
+8:2/0 = 0
+9:4/0 = 0
+10:5/0 = 0
+10:6/0 = 0
+10:7/0 = 0
+10:8/0 = 0
+9:8/0 = 0
+9:7/0 = 0
+9:6/0 = 0
+9:5/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8w7g3"]
+texture = ExtResource("3_bfdlc")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+0:7/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8w7g3"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 0
+sources/0 = SubResource("TileSetAtlasSource_bfdlc")
+sources/1 = SubResource("TileSetAtlasSource_8w7g3")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hv2aa"]
+atlas = ExtResource("3_bfdlc")
+region = Rect2(61.5, 5.75, 100.5, 20.5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ib4ol"]
+atlas = ExtResource("4_bxiex")
+region = Rect2(2, 3, 113, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfdlc"]
+atlas = ExtResource("4_bxiex")
+region = Rect2(2, 29, 113, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8w7g3"]
+atlas = ExtResource("4_bxiex")
+region = Rect2(2, 55, 113, 25)
+
+[node name="Ending" type="Node2D" unique_id=2137922566]
+script = ExtResource("1_6u0w7")
+
+[node name="Tilemap" type="TileMapLayer" parent="." unique_id=1080864232]
+use_parent_material = true
+tile_map_data = PackedByteArray("AAAAAAAAAAAHAAMAAGAAAAEAAAAGAAMAAGAAAAIAAAAFAAMAAGAAAAMAAAAEAAMAAGAAAAQAAAAEAAAAAAAAAAUAAAAEAAAAAAAAAAYAAAAEAAAAAAAAAAcAAAADAAAAAAAAAAgAAAAHAAAAAGAAAAkAAAAGAAAAAGAAAAoAAAAFAAAAAGABAAAAAAAHAAQAAGABAAEAAAAGAAQAAGABAAIAAAAFAAQAAGABAAMAAAAEAAQAAGABAAQAAAAEAAAAAAABAAUAAAAGAAEAAAABAAYAAAAEAAAAAAABAAcAAAADAAAAAAABAAgAAAAEAAAAAAABAAkAAAAGAAIAAAABAAoAAAAEAAAAAAACAAAAAAAHAAUAAGACAAEAAAAGAAUAAGACAAIAAAAFAAUAAGACAAMAAAAEAAUAAGACAAQAAAAEAAAAAAACAAUAAAAHAAEAAAACAAYAAAAEAAAAAAACAAcAAAADAAAAAAACAAgAAAAEAAAAAAACAAkAAAAHAAIAAAACAAoAAAAEAAAAAAADAAAAAAAHAAYAAGADAAEAAAAGAAYAAGADAAIAAAAFAAYAAGADAAMAAAAEAAYAAGADAAQAAAAEAAAAAAADAAUAAAAEAAAAAAADAAYAAAAEAAAAAAADAAcAAAADAAAAAAADAAgAAAAEAAAAAAADAAkAAAAEAAAAAAADAAoAAAAEAAAAAAAEAAAAAAALAAAAAGAEAAEAAAAKAAAAAGAEAAIAAAAJAAAAAGAEAAMAAAAIAAAAAGAEAAQAAAAEAAAAAAAEAAUAAAAEAAAAAAAEAAYAAAAEAAAAAAAEAAcAAAADAAAAAAAEAAgAAAAEAAAAAAAEAAkAAAAEAAAAAAAEAAoAAAAEAAAAAAAFAAAAAAALAAEAAGAFAAEAAAAKAAEAAGAFAAIAAAAJAAEAAGAFAAMAAAAIAAEAAGAFAAQAAAAEAAAAAAAFAAUAAAAEAAAAAAAFAAYAAAAEAAAAAAAFAAcAAAADAAAAAAAFAAgAAAAEAAAAAAAFAAkAAAAEAAAAAAAFAAoAAAAEAAAAAAAGAAAAAAALAAIAAGAGAAEAAAAKAAIAAGAGAAIAAAAJAAIAAGAGAAMAAAAIAAIAAGAGAAQAAAAEAAAAAAAGAAUAAAAEAAAAAAAGAAYAAAAEAAAAAAAGAAcAAAADAAAAAAAGAAgAAAAEAAAAAAAGAAkAAAAEAAAAAAAGAAoAAAAEAAAAAAAHAAAAAAALAAMAAGAHAAEAAAAKAAMAAGAHAAIAAAAJAAMAAGAHAAMAAAAIAAMAAGAHAAQAAAAEAAAAAAAHAAUAAAAEAAAAAAAHAAYAAAAEAAAAAAAHAAcAAAADAAAAAAAHAAgAAAAEAAAAAAAHAAkAAAAEAAAAAAAHAAoAAAAEAAAAAAAIAAAAAAAEAAAAAAAIAAEAAAAEAAAAAAAIAAIAAAAEAAAAAAAIAAMAAAAEAAAAAAAIAAQAAAAEAAAAAAAIAAUAAAAEAAAAAAAIAAYAAAAEAAAAAAAIAAcAAAADAAAAAAAIAAgAAAAEAAAAAAAIAAkAAAAEAAAAAAAIAAoAAAAEAAAAAAAJAAAAAAAEAAAAAAAJAAEAAAAEAAAAAAAJAAIAAAAEAAAAAAAJAAMAAAAEAAAAAAAJAAQAAAAEAAAAAAAJAAUAAAAGAAEAAAAJAAYAAAAEAAAAAAAJAAcAAAADAAAAAAAJAAgAAAAEAAAAAAAJAAkAAAAGAAIAAAAJAAoAAAAEAAAAAAAKAAAAAAAEAAAAAAAKAAEAAAAEAAAAAAAKAAIAAAAEAAAAAAAKAAMAAAAEAAAAAAAKAAQAAAAEAAAAAAAKAAUAAAAHAAEAAAAKAAYAAAAEAAAAAAAKAAcAAAADAAAAAAAKAAgAAAAEAAAAAAAKAAkAAAAHAAIAAAAKAAoAAAAEAAAAAAALAAAAAAAEAAAAAAALAAEAAAAEAAAAAAALAAIAAAAEAAAAAAALAAMAAAAEAAAAAAALAAQAAAAEAAAAAAALAAUAAAAEAAAAAAALAAYAAAAEAAAAAAALAAcAAAADAAAAAAALAAgAAAAEAAAAAAALAAkAAAAEAAAAAAALAAoAAAAEAAAAAAAMAAAAAAALAAAAAGAMAAEAAAAKAAAAAGAMAAIAAAAJAAAAAGAMAAMAAAAIAAAAAGAMAAQAAAAEAAAAAAAMAAUAAAAEAAAAAAAMAAYAAAAEAAAAAAAMAAcAAAADAAAAAAAMAAgAAAAEAAAAAAAMAAkAAAAEAAAAAAAMAAoAAAAEAAAAAAANAAAAAAALAAEAAGANAAEAAAAKAAEAAGANAAIAAAAJAAEAAGANAAMAAAAIAAEAAGANAAQAAAAEAAAAAAANAAUAAAAEAAAAAAANAAYAAAAEAAAAAAANAAcAAAADAAAAAAANAAgAAAAEAAAAAAANAAkAAAAEAAAAAAANAAoAAAAEAAAAAAAOAAAAAAALAAIAAGAOAAEAAAAKAAIAAGAOAAIAAAAJAAIAAGAOAAMAAAAIAAIAAGAOAAQAAAAEAAAAAAAOAAUAAAAEAAAAAAAOAAYAAAAEAAAAAAAOAAcAAAADAAAAAAAOAAgAAAAEAAAAAAAOAAkAAAAEAAAAAAAOAAoAAAAEAAAAAAAPAAAAAAALAAMAAGAPAAEAAAAKAAMAAGAPAAIAAAAJAAMAAGAPAAMAAAAIAAMAAGAPAAQAAAAEAAAAAAAPAAUAAAAEAAAAAAAPAAYAAAAEAAAAAAAPAAcAAAADAAAAAAAPAAgAAAAEAAAAAAAPAAkAAAAEAAAAAAAPAAoAAAAEAAAAAAAQAAAAAAAHAAMAAGAQAAEAAAAGAAMAAGAQAAIAAAAFAAMAAGAQAAMAAAAEAAMAAGAQAAQAAAAEAAAAAAAQAAUAAAAEAAAAAAAQAAYAAAAEAAAAAAAQAAcAAAADAAAAAAAQAAgAAAAEAAAAAAAQAAkAAAAEAAAAAAAQAAoAAAAEAAAAAAARAAAAAAAHAAQAAGARAAEAAAAGAAQAAGARAAIAAAAFAAQAAGARAAMAAAAEAAQAAGARAAQAAAAEAAAAAAARAAUAAAAGAAEAAAARAAYAAAAEAAAAAAARAAcAAAADAAAAAAARAAgAAAAEAAAAAAARAAkAAAAGAAIAAAARAAoAAAAEAAAAAAASAAAAAAAHAAUAAGASAAEAAAAGAAUAAGASAAIAAAAFAAUAAGASAAMAAAAEAAUAAGASAAQAAAAEAAAAAAASAAUAAAAHAAEAAAASAAYAAAAEAAAAAAASAAcAAAADAAAAAAASAAgAAAAEAAAAAAASAAkAAAAHAAIAAAASAAoAAAAEAAAAAAATAAAAAAAHAAYAAGATAAEAAAAGAAYAAGATAAIAAAAFAAYAAGATAAMAAAAEAAYAAGATAAQAAAAHAAAAAGATAAUAAAAGAAAAAGATAAYAAAAFAAAAAGATAAcAAAADAAAAAAATAAgAAAAEAAAAAAATAAkAAAAEAAAAAAATAAoAAAAEAAAAAAAAAAsAAQAFAAcAAAABAAsAAQAFAAcAAAACAAsAAQAFAAcAAAADAAsAAQAFAAcAAAAEAAsAAQAFAAcAAAAFAAsAAQAFAAcAAAAGAAsAAQAFAAcAAAAHAAsAAQAFAAcAAAAIAAsAAQAFAAcAAAAJAAsAAQAFAAcAAAAKAAsAAQAFAAcAAAALAAsAAQAFAAcAAAAMAAsAAQAFAAcAAAANAAsAAQAFAAcAAAAOAAsAAQAFAAcAAAAPAAsAAQAFAAcAAAAQAAsAAQAFAAcAAAARAAsAAQAFAAcAAAASAAsAAQAFAAcAAAATAAsAAQAFAAcAAAA=")
+tile_set = SubResource("TileSet_8w7g3")
+use_kinematic_bodies = true
+
+[node name="SpotLineLeft" type="Sprite2D" parent="." unique_id=625310916]
+position = Vector2(280, 4.999996)
+rotation = 1.5707964
+scale = Vector2(1.1585085, 1)
+texture = SubResource("AtlasTexture_hv2aa")
+centered = false
+
+[node name="SpotLineRight" type="Sprite2D" parent="." unique_id=2126163478]
+position = Vector2(379, 4.0000005)
+rotation = 1.5707964
+scale = Vector2(1.1585085, 1)
+texture = SubResource("AtlasTexture_hv2aa")
+centered = false
+
+[node name="ParkingSpot" type="Marker2D" parent="." unique_id=1681888464]
+position = Vector2(320, 63)
+
+[node name="Car" type="Sprite2D" parent="." unique_id=980522820]
+position = Vector2(-63, 305)
+rotation = 1.5707964
+texture = ExtResource("2_bxiex")
+
+[node name="EndUI" type="CanvasLayer" parent="." unique_id=946427639]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EndUI" unique_id=1315548974]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -228.0
+offset_top = -176.0
+offset_right = 228.0
+offset_bottom = -66.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TitleLabel" type="Label" parent="EndUI/VBoxContainer" unique_id=1353425474]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ib4ol")
+text = "YOU FINALLY PARKED!"
+horizontal_alignment = 1
+
+[node name="SubLabel" type="Label" parent="EndUI/VBoxContainer" unique_id=1899532997]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ib4ol")
+text = "Made it to class on time"
+horizontal_alignment = 1
+
+[node name="GradeLabel" type="Label" parent="EndUI/VBoxContainer" unique_id=1046574131]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ib4ol")
+text = "Final Grade: A"
+horizontal_alignment = 1
+
+[node name="Buttons" type="HBoxContainer" parent="EndUI/VBoxContainer" unique_id=1910984230]
+layout_mode = 2
+
+[node name="Play Again Button" type="TextureButton" parent="EndUI/VBoxContainer/Buttons" unique_id=1637050748]
+custom_minimum_size = Vector2(226, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_ib4ol")
+texture_pressed = SubResource("AtlasTexture_bfdlc")
+texture_hover = SubResource("AtlasTexture_8w7g3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button Label" type="Label" parent="EndUI/VBoxContainer/Buttons/Play Again Button" unique_id=1623841813]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.13333334, 0.015686275, 1)
+theme_override_fonts/font = ExtResource("3_ib4ol")
+theme_override_font_sizes/font_size = 16
+text = "PLAY AGAIN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Main Menu Button" type="TextureButton" parent="EndUI/VBoxContainer/Buttons" unique_id=427035842]
+custom_minimum_size = Vector2(226, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = SubResource("AtlasTexture_ib4ol")
+texture_pressed = SubResource("AtlasTexture_bfdlc")
+texture_hover = SubResource("AtlasTexture_8w7g3")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button Label" type="Label" parent="EndUI/VBoxContainer/Buttons/Main Menu Button" unique_id=2123285636]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = -11.5
+offset_right = 72.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.16078432, 0.13333334, 0.015686275, 1)
+theme_override_fonts/font = ExtResource("3_ib4ol")
+theme_override_font_sizes/font_size = 16
+text = "MAIN MENU"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="EndUI/VBoxContainer/Buttons/Play Again Button" to="." method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="EndUI/VBoxContainer/Buttons/Main Menu Button" to="." method="_on_main_menu_button_pressed"]

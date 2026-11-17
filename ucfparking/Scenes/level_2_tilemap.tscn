@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c6ndw6aetkkxa" path="res://Assets/Garage tile map.png" id="5_2v7bc"]
 [ext_resource type="Script" uid="uid://2rifdgnh0mhl" path="res://Scenes/Car_body.gd" id="6_1bc8o"]
 [ext_resource type="Texture2D" uid="uid://dyn1oyok78wb4" path="res://Assets/UI/hyundai_elantra_sprite.png.webp" id="7_w1ivt"]
-[ext_resource type="Script" uid="uid://brfl1ilcsfw2g" path="res://Scenes/target_1.gd" id="8_3vb74"]
+[ext_resource type="Script" uid="uid://cvv61qvv0xttg" path="res://Scenes/target_2.gd" id="8_86gp8"]
 [ext_resource type="Texture2D" uid="uid://dc6uvr0xgcadv" path="res://Assets/Characters/largeprofsprite2 (2).png" id="9_hes3q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6444e"]
@@ -227,7 +227,7 @@ texture = SubResource("AtlasTexture_uud5k")
 
 [node name="Target1" type="Area2D" parent="." unique_id=618671502]
 position = Vector2(404, -28)
-script = ExtResource("8_3vb74")
+script = ExtResource("8_86gp8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Target1" unique_id=2134567323]
 position = Vector2(-68, -891)

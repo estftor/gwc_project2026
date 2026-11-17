@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bhjc614de4bkg" path="res://Scenes/level_2.gd" id="1_1q6tm"]
 [ext_resource type="PackedScene" uid="uid://dfqniulhhxati" path="res://Scenes/pause_menu.tscn" id="1_v3rpw"]
-[ext_resource type="PackedScene" uid="uid://3t81ia4a1vuf" path="res://Scenes/win_screen.tscn" id="2_12fag"]
 [ext_resource type="PackedScene" uid="uid://cwfmtaf3qkj1v" path="res://Scenes/lose_screen.tscn" id="3_1q6tm"]
 [ext_resource type="Texture2D" uid="uid://c5l3deogenvum" path="res://Assets/UI/hyundai_elantra_sprite_white.png" id="3_42uki"]
 [ext_resource type="Texture2D" uid="uid://boek3ifyl6fxg" path="res://Assets/Garage_tile_map.png" id="3_uhnj4"]
@@ -323,9 +322,6 @@ theme_override_fonts/font = ExtResource("5_v36qu")
 text = "Timer"
 
 [node name="PauseMenu" parent="." unique_id=1632151657 instance=ExtResource("1_v3rpw")]
-visible = false
-
-[node name="WinScreen" parent="." unique_id=1674275575 instance=ExtResource("2_12fag")]
 visible = false
 
 [node name="LoseScreen" parent="." unique_id=956295192 instance=ExtResource("3_1q6tm")]
