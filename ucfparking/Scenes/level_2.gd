@@ -5,10 +5,12 @@ const GRADES = ["A", "B", "C", "F"]
 var professorHonked: bool = false
 @export var annoyedHit: int = 10
 @export var wastedHonk: int = 15
-var hits = 0
+var hits: int = GameState.grade_idx
 var annoyance: float = 0.0
 var scatteredCount: int = 0
 
+func _ready() -> void:
+	$GradeLabel.text = "Grade: " + GRADES[hits]
 
 func _process(delta: float) -> void:
 	$TimeLabel.text = str(ceili($LevelTimer.time_left))
@@ -71,8 +73,8 @@ func student_hit() -> void:
 
 
 func _on_level_timer_timeout() -> void:
-	$WinScreen/VBoxContainer/Label.text = "You Win! Grade: " + GRADES[hits]
-	$WinScreen.show_screen()
+	GameState.grade_idx = hits
+	get_tree().change_scene_to_file("res://Scenes/ending.tscn")
 
 func add_annoyance(amount: float) -> void:
 	annoyance += amount

@@ -75,4 +75,5 @@ func _on_timer_timeout() -> void:
 
 
 func _on_next_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/level_2.tscn")
+	GameState.grade_idx = currentGradeIdx
+	get_tree().change_scene_to_file("res://Scenes/level_2_tilemap.tscn")

@@ -14,6 +14,10 @@ config/name="ucfparking"
 run/main_scene="uid://b2sdy72dmgycl"
 config/features=PackedStringArray("4.7", "Forward Plus")
 
+[autoload]
+
+GameState="*uid://mpxyknx73hby"
+
 [display]
 
 window/size/viewport_width=640
