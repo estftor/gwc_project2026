@@ -1,11 +1,14 @@
 extends CanvasLayer
 
-@onready var timer_label = $"../Timer/Timer label"
+# Gets the timer label from the current scene. If the scene doesn't have a timer label, it returns Null
+@onready var timer_label = get_node_or_null("../Timer/Timer label")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visible = false
-	timer_label.time_up.connect(show_screen)
+	# Checks if timer label exists in the current scene.
+	if timer_label != null:
+		timer_label.time_up.connect(show_screen)
 
 #TEMP: Press L to lose, for testing. Delete when the real lose condition exists.
 func _input(event: InputEvent) -> void:
