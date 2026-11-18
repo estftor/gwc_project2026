@@ -15,8 +15,8 @@ var questions: Array[Dictionary] = [
 		"answerIdx": 3
 	}, 
 	{
-		"question": "This is the question",
-		"options": ["Option1", "Option2", "Option3", "Option4"],
+		"question": "Which parking garage isn't\nthe most popular?",
+		"options": ["Garage H", "Garage A", "Garage C", "Garage D"],
 		"answerIdx": 1
 	}
 ]
