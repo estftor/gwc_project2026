@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://n4urhw8fv1rv" path="res://Assets/UI/startscreen.png" id="2_dibtv"]
 [ext_resource type="Texture2D" uid="uid://cffq3514bkory" path="res://Assets/UI/start menu buttons.png" id="2_dl0pg"]
 [ext_resource type="FontFile" uid="uid://warafq12toru" path="res://Assets/Fonts/PressStart2P-Regular.ttf" id="3_dl0pg"]
+[ext_resource type="Texture2D" uid="uid://dvi51ii1h7v5x" path="res://Assets/UI/gamelogo.png" id="3_o6asp"]
 [ext_resource type="Script" uid="uid://t3xu53t6510p" path="res://Scenes/settings_menu.gd" id="5_o42a4"]
 [ext_resource type="Texture2D" uid="uid://berhliuj4nr5h" path="res://Assets/UI/Car game UI.png" id="5_ujd4t"]
 [ext_resource type="AudioStream" uid="uid://b4cskh878hfsn" path="res://Cave system.mp3" id="7_dibtv"]
@@ -102,6 +103,20 @@ layout_mode = 0
 offset_right = 640.0
 offset_bottom = 360.0
 texture = ExtResource("2_dibtv")
+
+[node name="Logo" type="TextureRect" parent="." unique_id=1456253204]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 10.0
+offset_right = 200.0
+offset_bottom = 160.0
+grow_horizontal = 2
+texture = ExtResource("3_o6asp")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Main Menu Buttons" type="VBoxContainer" parent="." unique_id=1446113530]
 layout_mode = 1
