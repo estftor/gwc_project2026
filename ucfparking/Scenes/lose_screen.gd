@@ -10,13 +10,6 @@ func _ready() -> void:
 	if timer_label != null:
 		timer_label.time_up.connect(show_screen)
 
-#TEMP: Press L to lose, for testing. Delete when the real lose condition exists.
-func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and event.keycode == KEY_L:
-		if not get_tree().paused:
-			show_screen()
-
-
 
 func show_screen() -> void:
 	visible = true

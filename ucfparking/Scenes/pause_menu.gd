@@ -9,13 +9,11 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	
 	# Godot built in pause press
-	if event.is_action_pressed("ui_cancel") and (visible or not get_tree().paused):
+	if event.is_action_pressed("pause") and (visible or not get_tree().paused):
 		get_tree().paused = !get_tree().paused
 		visible = get_tree().paused
 		$"Settings Menu".visible = false
 		$"Pause Menu Buttons".visible = true
-
-	
 
 
 func _on_resume_button_pressed() -> void:
