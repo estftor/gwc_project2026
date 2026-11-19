@@ -6,12 +6,6 @@ func _ready() -> void:
 	if next_level_path == "":
 		$"VBoxContainer/Win Buttons/Next Level Button".visible = false
 
-#TEMP: Press W to win, for testing. Delete when the real win condition exists.
-func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed and event.keycode == KEY_W:
-		if not get_tree().paused:
-			show_screen()
-
 func show_screen() -> void:
 	visible = true
 	get_tree().paused = true
